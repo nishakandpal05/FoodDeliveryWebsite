@@ -7,6 +7,9 @@ import  validator  from "validator";
 const loginUser = async(req,res)=>{
 
 }
+const createToken = (id) => {
+    return jwt.sign({id},process.env.jWT_SECRET)
+}
 
 //register user
 const registerUser = async(req,res)=>{
@@ -38,8 +41,14 @@ const registerUser = async(req,res)=>{
 
         const user = await newUser.save()
 
+        const token = createToken(user._id)
+        res.json({success:true})
+
+
 
     }catch(error){
+        console.log(error);
+        res.json({success:false,message:"Error"})
 
     }
 
