@@ -6,6 +6,9 @@ import upload_area from './upload_area.png'
 import parcel_icon from './parcel_icon.png'
 import search_icon from './search_icon.png'
 import basket_icon from './basket_icon.png'
+import profile_icon from './profile_icon.png'
+import bag_icon from './bag_icon.png'
+import logout_icon from './logout_icon.png'
 
 
 export const assets ={
@@ -17,6 +20,9 @@ export const assets ={
     parcel_icon,
     search_icon,
     basket_icon,
+    bag_icon,
+    profile_icon,
+    logout_icon
     
 }
 
